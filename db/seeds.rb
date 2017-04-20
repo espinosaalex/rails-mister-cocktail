@@ -9,6 +9,11 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
+Cocktail.destroy_all
+Dose.destroy_all
+Ingredient.destroy_all
+
+
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 ingredients = open(url).read
 ingredients = JSON.parse(ingredients)
@@ -19,7 +24,7 @@ end
 
 30.times do
   cocktail = Cocktail.create(name: Faker::Ancient.primordial)
-  Dose.create(cocktail: cocktail, ingredient: Ingredient.all.sample)
+  Dose.create(cocktail: cocktail, ingredient: Ingredient.all.sample, description: Faker::Hipster.paragraphs.sample)
 end
 
 

@@ -13,3 +13,33 @@
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%; }
+a {
+  color: $green;
+}
+h2 {
+  font-size: 600%;
+}
+br {
+  color: #111;
+}
+body {
+  position: relative;
+}
+.add-cocktail{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+}
+button {
+  padding: 10px;
+  font-size: 18px;
+}

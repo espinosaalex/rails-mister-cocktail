@@ -1,0 +1,9 @@
+<h1>add a new dose</h1>
+<ul></ul>
+<%= simple_form_for @dose , url: cocktail_doses_path do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.label :description %>
+  <%= f.input_field :description %>
+  <%= f.input_field :cocktail_id, as: :hidden, input_html: {value: @dose.cocktail_id}%>
+  <%= f.submit 'Save' %>
+<% end %>
