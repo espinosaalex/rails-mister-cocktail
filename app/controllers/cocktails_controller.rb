@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktails_params)
-    if @restaurant.save
+    if @cocktail.save
       redirect_to @cocktail
     else
       render 'new'
